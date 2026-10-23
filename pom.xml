@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.1.1</version>
+		<version>4.1.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.com.joaorasmussen</groupId>
@@ -29,7 +29,7 @@
 	<properties>
 		<java.version>25</java.version>
 		<logback.version>1.6.5</logback.version>
-		<tomcat.version>11.0.25</tomcat.version>
+		<tomcat.version>11.0.26</tomcat.version>
 		<jackson.version>3.1.7</jackson.version>
 	</properties>
 	<dependencies>
@@ -41,6 +41,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
+
+		<!--aqui tem um warning -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webmvc</artifactId>
@@ -54,10 +56,11 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>42.7.14</version>
 			<scope>runtime</scope>
 		</dependency>
 
-
+		<!--aqui tem um warning -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa-test</artifactId>
