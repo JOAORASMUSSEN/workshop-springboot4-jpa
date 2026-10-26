@@ -1,6 +1,7 @@
 package br.com.joaorasmussen.course.entities;
 
 import br.com.joaorasmussen.course.entities.pk.OrderItemPK;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -15,7 +16,7 @@ public class OrderItem implements Serializable {
 
 
     @EmbeddedId
-    private OrderItemPK id; //a pk é a junção das duas pk
+    private OrderItemPK id = new OrderItemPK(); //a pk é a junção das duas pk
 
     private Integer quantity;
     private Double price;
@@ -30,6 +31,7 @@ public class OrderItem implements Serializable {
         this.price = price;
     }
 
+    @JsonIgnore
     public Order getOrder(){
         return id.getOrder();
     }
